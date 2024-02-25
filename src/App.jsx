@@ -6,9 +6,10 @@ import './App.css'; // Make sure your custom styles are defined here
 
 function App() {
   return (
-    <div className='h-screen bg-custom' style={{ backgroundImage: `url(${backgroundImage})` }}>
-      {/* Your app content goes here */}
-    </div>
+    <>
+        <div className="overlay"></div> // This div acts as the overlay
+
+    </>
   );
 }
 

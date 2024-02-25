@@ -1,24 +1,24 @@
-html,
-body,
-#root {
+html, body, #root {
   height: 100%;
-}
-.bg-custom {
-  position: relative; /* Ensure the pseudo-element is contained */
-  width: 100%;
-  height: 100%;
-  background-position: center top; /* Aligns image to top */
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background: url('./assets/bg-img.png') no-repeat center top / cover;
+  background-attachment: fixed;
 }
 
-.bg-custom::before {
-  content: "";
+@media (max-width: 768px) {
+  html, body, #root {
+    background-position: 70% top; /* Adjusts background position */
+  }
+}
+
+/* New CSS for the overlay */
+#root .overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.44); /* Black with 44% opacity */
-  z-index: 1; /* Ensure it's above the background image */
+  background-color: rgba(0, 0, 0, 0.44); /* Semi-transparent black overlay */
+  z-index: 2; /* Ensures it's above the background image */
 }
